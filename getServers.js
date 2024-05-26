@@ -1,10 +1,9 @@
 /** @param {NS} ns */
 export async function main(ns) {
     getServers(ns);
-  
   }
   /** @param {NS} ns */
-  function getServers(ns) {
+  export function getServers(ns) {
     let fileName = "servers.txt";
     let servers = ns.scan("home");
   
@@ -28,4 +27,5 @@ export async function main(ns) {
       }
     }
     ns.tprint("Network scanned, " + servers.length + " added.")
+    return servers;
   }
